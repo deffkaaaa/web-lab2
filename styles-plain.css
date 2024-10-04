@@ -1,0 +1,202 @@
+@font-face {
+    font-family: 'Porsche Font';
+    src: url(fonts/Porsche\ Regular_0.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(fonts/montserrat-webfont/Montserrat-Light.woff), format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat Bold';
+    src: url(fonts/montserrat-webfont/Montserrat-Bold.woff), format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100vh;
+    font-size: clamp(16px, 1.5vw, 24px);
+    overflow: auto;
+}
+
+a {
+    color: #000000;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+.container {
+    height: 100vh;
+    position: relative;
+    overflow: auto;
+}
+
+.block {
+    border: 1px solid black;
+    position: absolute;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    font-weight: bold;
+    max-height: 100vh;
+}
+
+.block1 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%; /* Зменшена висота блоку 1 до 20% */
+    background-color: #b12b28;
+    text-align: center;
+}
+
+.block2 {
+    top: 20%; /* Додаємо відступ зверху */
+    left: 0;
+    height: 15%; /* Зменшена висота блоку 2 */
+    width: calc(25% - 10px); /* Вираховуємо ширину з урахуванням margin */
+    background-color: #000000;
+    margin: 10px 0; /* Додаємо відстань лише зверху і знизу */
+    float: left; /* Вирівнює блок2 ліворуч */
+}
+
+.block5 {
+    top: calc(35% + 15px);
+    left: 0;
+    height: 41.8%; /* Зменшуємо висоту блоку 5 */
+    width: calc(25% - 10px);
+    background-color: #ebd698;
+    margin-top: 5px;
+    margin-bottom: 20px; /* Додаємо відступ знизу */
+    float: left;
+}
+.block3 {
+    top: calc(20% + 10px); /* Змінюємо, щоб блок3 був під блоком 1 */
+    left: 25%; /* Додаємо відстань зліва */
+    width: calc(50% - 10px); /* Вираховуємо ширину з урахуванням margin */
+    height: 40%;
+    background-color: white;
+    margin-bottom: 10px; /* Додаємо відстань знизу для блоку 3 */
+}
+
+.block6 {
+    font-family: 'Porsche Font', sans-serif;
+    font-size: clamp(13px, 2vw, 32px); 
+    overflow: auto;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+    top: calc(60% + 10px); /* Змінюємо, щоб блок6 був під блоком3 з урахуванням margin */
+    left: 25%; /* Додаємо відстань зліва */
+    width: calc(50% - 10px); /* Вираховуємо ширину з урахуванням margin */
+    height: calc(18% - 10px);
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    margin: 10px 0; 
+}
+
+.block4 {
+    top: 20%;
+    left: 75%;
+    width: 25%;
+    height: calc(59.19% - 10px);
+    max-height: 100%;
+    background-color: #ebd698;
+    text-align: center;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.block4 h2 {
+    font-size: clamp(18px, 2vw, 36px);
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Montserrat Bold', sans-serif;
+}
+
+.block7 {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background-color: #b12b28;
+    text-align: center;
+    margin-top: 10px; /* Add margin here to increase the gap */
+}
+
+.block img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blockX, .blockY {
+    background-color: #ebd698;
+    font-size: 2vw;
+    padding: 1vh 2vw; 
+    position: absolute;
+    display: inline-block;
+    font-family: 'Porsche Font', sans-serif;
+    max-width: 80%;
+    text-align: center;
+    overflow: auto;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.blockX {
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: clamp(20px, 2.5vw, 40px);
+}
+
+.blockY {
+    bottom: 50%;
+    right: 10px;
+    transform: translateY(50%);
+    font-size: clamp(20px, 2.5vw, 40px);
+}
+
+ol, ul {
+    padding-left: 2rem; 
+    margin: 0 auto;
+    max-width: 80%; 
+    text-align: left;
+    max-height: 100%;
+    overflow: auto;
+}
+
+ol {
+    list-style-type: decimal;
+    padding-left: 30px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 30px;
+}
+
+li {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: clamp(14px, 1.5vw, 28px);
+}
